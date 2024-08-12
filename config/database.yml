@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  username: your_database_username
+  password: your_database_password
+  host: localhost
+
+development:
+  <<: *default
+  database: your_database_name_development
+
+test:
+  <<: *default
+  database: your_database_name_test
+
+production:
+  <<: *default
+  database: your_database_name_production
+  username: your_database_username
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  host: localhost
