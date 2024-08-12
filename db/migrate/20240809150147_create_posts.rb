@@ -5,9 +5,9 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.string :title, null: false
       t.text :content, null: false
 
-      t.timestamps
+       t.timestamps
     end
 
-    add_index :posts, :user_id
+    add_index :posts, :user_id    
   end
 end
