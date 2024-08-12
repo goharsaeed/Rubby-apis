@@ -7,6 +7,7 @@ class CreatePosts < ActiveRecord::Migration[7.0]
 
        t.timestamps
     end
+    # here is rubb
 
     add_index :posts, :user_id    
   end
